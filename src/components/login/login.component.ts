@@ -4,6 +4,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -21,9 +22,12 @@ import { MatButtonModule } from '@angular/material/button';
 export class LoginComponent {
   tabIndex = 0;
 
+  constructor(private router: Router) {}
+
   login() {
     // TODO
     console.log('SESION INICIADA');
+    this.router.navigate(['/conferencia']);
   }
 
   signUp() {
