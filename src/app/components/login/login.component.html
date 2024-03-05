@@ -7,18 +7,33 @@
             <br />
             <mat-form-field appearance="outline" class="input">
               <mat-label>Usuario</mat-label>
-              <input matInput placeholder="Nombre de usuario" />
+              <input
+                matInput
+                placeholder="Nombre de usuario"
+                [(ngModel)]="user.username"
+              />
               <mat-hint></mat-hint>
             </mat-form-field>
             <mat-form-field appearance="outline" class="input">
               <mat-label>Contraseña</mat-label>
-              <input matInput placeholder="Contraseña" />
+              <input
+                matInput
+                placeholder="Contraseña"
+                [(ngModel)]="user.password"
+              />
               <mat-hint></mat-hint>
             </mat-form-field>
+            <mat-checkbox
+              color="primary"
+              [(ngModel)]="remember_session"
+              (ngModelChange)="keepSession()"
+              >Recordarme</mat-checkbox
+            >
+            <br />
             <button
               mat-raised-button
               color="primary"
-              (click)="login()"
+              (click)="validateLogin()"
               class="input"
             >
               Iniciar Sesión
