@@ -2,7 +2,7 @@
   <mat-card class="login-card">
     <mat-card-content>
       <mat-tab-group [(selectedIndex)]="tabIndex">
-        <mat-tab label="Login">
+        <mat-tab label="LOGIN">
           <div class="form-wrap center">
             <br />
             <mat-form-field appearance="outline" class="input">
@@ -10,7 +10,7 @@
               <input
                 matInput
                 placeholder="Nombre de usuario"
-                [(ngModel)]="user.username"
+                [(ngModel)]="userLogIn.username"
               />
               <mat-hint></mat-hint>
             </mat-form-field>
@@ -19,9 +19,8 @@
               <input
                 matInput
                 placeholder="Contraseña"
-                [(ngModel)]="user.password"
+                [(ngModel)]="userLogIn.password"
               />
-              <mat-hint></mat-hint>
             </mat-form-field>
             <mat-checkbox
               color="primary"
@@ -46,17 +45,25 @@
             </div>
           </div>
         </mat-tab>
-        <mat-tab label="Signup">
+        <mat-tab label="SIGNUP">
           <div class="form-wrap center">
             <br />
             <mat-form-field appearance="outline" class="input">
               <mat-label>Usuario</mat-label>
-              <input matInput placeholder="Elige un nombre" />
+              <input
+                matInput
+                placeholder="Elige un nombre"
+                [(ngModel)]="userSignUp.username"
+              />
               <mat-hint></mat-hint>
             </mat-form-field>
             <mat-form-field appearance="outline" class="input">
               <mat-label>Contraseña</mat-label>
-              <input matInput placeholder="Elige una contraseña" />
+              <input
+                matInput
+                placeholder="Elige una contraseña"
+                [(ngModel)]="userSignUp.password"
+              />
               <mat-hint></mat-hint>
             </mat-form-field>
             <button
